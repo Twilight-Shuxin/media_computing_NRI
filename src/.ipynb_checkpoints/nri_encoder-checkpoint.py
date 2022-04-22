@@ -6,9 +6,10 @@ from collections import OrderedDict
 class MLPBlock(nn.Module):
     def __init__(self, in_dims, hidden_dims, out_dims, dropout_rate):
         super().__init__()
-        np.random.seed(42)
+        
         self.layer1 = nn.Linear(in_dims, hidden_dims)
         self.elu1 = nn.ELU()
+        
         # During training, randomly zeroes some of the elements of the input tensor with probability p
         self.drop_out = nn.Dropout(dropout_rate)
         self.layer2 = nn.Linear(hidden_dims,out_dims)
@@ -37,14 +38,12 @@ class MLPBlock(nn.Module):
 class MLPEncoder(nn.Module):
     def __init__(self, in_dims, hidden_dims, out_dims, drop_rate):
         super().__init__()
-        
         self.mlp_block_1 = MLPBlock(in_dims, hidden_dims, hidden_dims, drop_rate)
         self.mlp_block_2 = MLPBlock(hidden_dims * 2, hidden_dims, hidden_dims, drop_rate)
         self.out_layer = nn.Linear(hidden_dims, out_dims)
         self.init_weights()   
 
     def init_weights(self):
-        np.random.seed(42)
         for layer in self.modules():
             if isinstance(layer, nn.Linear):
                 nn.init.xavier_uniform_(layer.weight)
