@@ -16,7 +16,7 @@ parser = argparse.ArgumentParser()
 
 def parse_args():
     parser = argparse.ArgumentParser(description="code for training decoder")
-    parser.add_argument('-n','--nodes', dest='node_dims', default=4) 
+    parser.add_argument('-n','--node_dims', dest='node_dims', default=4) 
     parser.add_argument('-sd','--sep_hidden_dims', dest='sep_hidden_dims', default=256)
     parser.add_argument('-so','--sep_out_dims', dest='sep_out_dims', default=256)
     parser.add_argument('-hid','--hidden_dims', dest='hidden_dims', default=256)
