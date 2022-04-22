@@ -20,7 +20,7 @@ def parse_args():
     parser.add_argument('-sd','--sep_hidden_dims', dest='sep_hidden_dims', default=256)
     parser.add_argument('-so','--sep_out_dims', dest='sep_out_dims', default=256)
     parser.add_argument('-hid','--hidden_dims', dest='hidden_dims', default=256)
-    parser.add_argument('-e','--epoch', dest='epoch_num', default=10)
+    parser.add_argument('-e','--epoch', dest='epoch_num', default=30)
     parser.add_argument('-ps','--time_step', dest='time_steps_test',default=49)
     parser.add_argument('-pred_s','--pred_step', dest='pred_steps',default=1) # 49->4
     parser.add_argument('-et','--edge_types', dest='edge_types',default=2)
@@ -98,7 +98,7 @@ def train(args):
             
             loss_val.append(loss.item())
         
-        if np.mean(loss_val) < minimum_loss:
+        if np.mean(loss_val) < minimum_loss - 1e-4:
             minimum_loss = np.mean(loss_val)
             best_model_path = model_path
             if not os.path.exists(best_model_path):

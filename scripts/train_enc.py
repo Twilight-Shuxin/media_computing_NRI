@@ -16,7 +16,7 @@ def parse_args():
     parser = argparse.ArgumentParser(description="code for training encoder")
     parser.add_argument('-n','--nodes', dest='nodes', default=5) 
     parser.add_argument('-d','--dims', dest='dims', default=4)
-    parser.add_argument('-e','--epoch', dest='epoch_num', default=10)
+    parser.add_argument('-e','--epoch', dest='epoch_num', default=40)
     parser.add_argument('-hid','--hidden', dest='hidden_dims', default=256)
     parser.add_argument('-ts','--time_steps',dest='time_steps',default=49) # 49->4
     parser.add_argument('-et','--edge_types', dest='edge_types',default=2)
@@ -107,7 +107,7 @@ def train(args):
             loss_val.append(loss.item())
             acc_val.append(acc)
             
-        if np.mean(acc_val) > best_acc:
+        if np.mean(acc_val) > best_acc +1e-4 :
             best_acc = np.mean(acc_val)
             best_model_path = model_path
             if not os.path.exists(best_model_path):
@@ -176,9 +176,7 @@ if __name__=="__main__":
     else:
         print('Run in GPU')
         
-    train_loader, valid_loader, test_loader, loc_max, loc_min, vel_max, vel_min = load_data(batch_size=2, suffix='_springsLight5')
-    print(len(test_loader))
-
+    train_loader, valid_loader, test_loader, loc_max, loc_min, vel_max, vel_min = load_data(batch_size=10, suffix='_springsLight5')
     
     best_model_path = train(args)  
     test(args, best_model_path)
