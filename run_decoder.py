@@ -17,7 +17,7 @@ parser.add_argument('-so','--sep_out_dims', dest='sep_out_dims', default=256)
 parser.add_argument('-hid','--hidden_dims', dest='hidden_dims', default=256)
 parser.add_argument('-e','--epoch', dest='epoch_num', default=30)
 parser.add_argument('-ps','--time_step', dest='time_steps_test',default=49)
-parser.add_argument('-pred_s','--pred_step', dest='pred_steps',default=1) # 49->4
+parser.add_argument('-pred_s','--pred_step', dest='pred_steps',default=10) # 49->4
 parser.add_argument('-et','--edge_types', dest='edge_types',default=2)
 parser.add_argument('-dr','--dropout_rate', dest='dropout', default=0.05)
 parser.add_argument('-nn','--num_nodes', dest='num_nodes', default=5)
