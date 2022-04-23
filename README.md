@@ -35,7 +35,7 @@ Notice that GPU is not necessary for training. You can train the model in a shor
 We provide `run_decoder.py` and `run_encoder.py` for trajectory generation based on trained model. 
 Simply run `python run_decoder.py` and a gif will show up in the root directory.
 
-The visualization of `python run_encoder.py` is still under development. 
+The visualization part of `run_encoder.py` is still under development. 
 
 
 
