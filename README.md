@@ -1,10 +1,12 @@
 # 2022 - NRI
 
 Reimplementation of the **N**eural **R**elation **I**nference proposed in the following paper: Kipf, Thomas, et al. "Neural relational inference for interacting systems." *International Conference on Machine Learning*. PMLR, 2018.
+<p align="center">
 <figure>
 <img src="figures/paper_fig.PNG" alt="Drawing" style="width: 600px;"/>
 <figcaption align = "center"><b>Figure 5 from Neural Relational Inference for Interacting Systems</b></figcaption>
 </figure>
+</p>
 
 ## Prerequisites
 
@@ -43,10 +45,10 @@ The visualization part of `run_encoder.py` is still under consideration.
 
 <table><tr>
 <td> <figure>
-<img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 250px;"/> 
+<img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 300px;"/> 
 </figure></td>
 <td> <figure>
-  <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 250px;"/>
+  <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 300px;"/>
 </figure></td>
 </tr>
 <tr>
