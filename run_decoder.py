@@ -8,21 +8,26 @@ from src.utils import mask, load_data
 from src.nri_decoder import MLPDecoder
 
 parser = argparse.ArgumentParser()
+# Use this argument to specify a decoder model.
 parser.add_argument('--model_path', type=str, dest='model_path', default='saved_model/decoder/20220422_0944/12/',
                     help='Specified model path within saved_model/encoder folder')
+# Use this argument to specify the corresponding dataset (used in training the model).
 parser.add_argument('-ds','--data_suffix', dest='data_suffix', default='_springsLight5') 
-parser.add_argument('-n','--node_dims', dest='node_dims', default=4) 
+# Arguments related to model structures. 
 parser.add_argument('-sd','--sep_hidden_dims', dest='sep_hidden_dims', default=256)
 parser.add_argument('-so','--sep_out_dims', dest='sep_out_dims', default=256)
 parser.add_argument('-hid','--hidden_dims', dest='hidden_dims', default=256)
-parser.add_argument('-e','--epoch', dest='epoch_num', default=30)
 parser.add_argument('-ps','--time_step', dest='time_steps_test',default=49)
-parser.add_argument('-pred_s','--pred_step', dest='pred_steps',default=10) # 49->4
-parser.add_argument('-et','--edge_types', dest='edge_types',default=2)
+parser.add_argument('-pred_s','--pred_step', dest='pred_steps',default=1) 
 parser.add_argument('-dr','--dropout_rate', dest='dropout', default=0.05)
+# Arguments realted to simulation data.
 parser.add_argument('-nn','--num_nodes', dest='num_nodes', default=5)
-parser.add_argument('-cuda', '--cuda',dest ='cuda', default = True)
+parser.add_argument('-n','--node_dims', dest='node_dims', default=4) 
+parser.add_argument('-et','--edge_types', dest='edge_types',default=2)
+# Arguments realted to training settings.
 parser.add_argument('-b','--batch_size', dest='batch_size', default=5)
+parser.add_argument('-e','--epoch', dest='epoch_num', default=30)
+parser.add_argument('-cuda', '--cuda',dest ='cuda', default = False)
 
 args = parser.parse_args()
 send_mask, rec_mask = mask(args.num_nodes)
