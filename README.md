@@ -38,7 +38,7 @@ Simply run `python run_decoder.py` and a gif will show up in the root directory.
 The visualization part of `run_encoder.py` is still under development. 
 
 ![gif4grand_truth](demo_grand_truth.gif "Grand truth trajectory")
-![gif4model_output](demo_model_output.gif "Model prediction trajectory")
+![gif4model_output](demo_model_out.gif "Model prediction trajectory")
 
 
 ## TODOs
