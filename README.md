@@ -50,8 +50,8 @@ The visualization part of `run_encoder.py` is still under consideration.
 </figure></td>
 </tr>
 <tr>
-  <td> Ground truth trajectory</td>
-  <td> Prediction trajectory</td>
+  <td> <center>Ground truth trajectory</center></td>
+  <td> <center>Prediction trajectory</center></td>
 </tr>  
 </table>
 ## TODOs
