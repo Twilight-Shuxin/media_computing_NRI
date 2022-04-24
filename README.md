@@ -32,10 +32,10 @@ Notice that GPU is not necessary for training. You can train the model in a shor
 
 ## Run demo
 
-We provide `run_decoder.py` and `run_encoder.py` for trajectory generation based on trained model. 
-Simply run `python run_decoder.py` and a gif will show up in the root directory.
+We provide `run_decoder.py` and `run_encoder.py` for generating trajectory based on trained model. The generated trajectory will be save in the `saved_results` folder. 
+Then use the notebook `traj_plot.ipynb` to plot a gif.
 
-The visualization part of `run_encoder.py` is still under development. 
+The visualization part of `run_encoder.py` is still under consideration. 
 
 <table><tr>
 <td> <img src="demo_grand_truth.gif" alt="Drawing" style="width: 300px;"/> </td>
