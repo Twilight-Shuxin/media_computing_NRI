@@ -7,7 +7,6 @@ import argparse
 from src.utils import mask, load_data
 from src.nri_encoder import MLPEncoder
 
-
 parser = argparse.ArgumentParser()
 parser.add_argument('--model_path', type=str, dest='model_path', default='saved_model/encoder/20220422_0942/9/',
                     help='Specified model path within saved_model/encoder folder')
@@ -25,8 +24,6 @@ parser.add_argument('-b','--batch_size', dest='batch_size', default=5)
 np.random.seed(42)
 torch.manual_seed(42)
 
-
-    
 args = parser.parse_args()
 send_mask, rec_mask = mask(args.nodes)
 
@@ -47,6 +44,7 @@ train_loader, valid_loader, test_loader, loc_max, loc_min, vel_max, vel_min = lo
 
 ret_output = np.zeros([len(test_loader), args.batch_size * args.nodes * (args.nodes-1), args.edge_types])
 ret_target = np.zeros([len(test_loader), args.batch_size * args.nodes * (args.nodes-1)])
+
 for batch_idx, (data, target) in enumerate(test_loader):
     if args.cuda and torch.cuda.is_available():
         input_batch.cuda()
@@ -61,6 +59,10 @@ for batch_idx, (data, target) in enumerate(test_loader):
     ret_output[batch_idx,:,:] = output.detach().numpy()
     ret_target[batch_idx,:] = target
 
-with open(f'saved_results/encoder_result/{args.data_suffix}.npy', 'wb') as f:
+with open(f'../saved_results/encoder_result/{args.data_suffix+"output"}.npy', 'wb') as f:
     np.save(f, ret_output)
+    
+with open(f'../saved_results/encoder_result/{args.data_suffix+"target"}.npy', 'wb') as f:    
     np.save(f, ret_target)
+
+print('----------------Generated results have been saved-------------------')
