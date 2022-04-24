@@ -4,7 +4,7 @@ Reimplementation of the **N**eural **R**elation **I**nference proposed in the fo
 <p align="center">
 <figure>
 <img src="figures/paper_fig.PNG" alt="Drawing" style="width: 600px;"/>
-<figcaption align = "center"><b>Figure 5 from Neural Relational Inference for Interacting Systems</b></figcaption>
+<figcaption align = "center"><b>Results figures in Neural Relational Inference for Interacting Systems</b></figcaption>
 </figure>
 </p>
 
