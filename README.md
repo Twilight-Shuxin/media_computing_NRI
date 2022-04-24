@@ -48,8 +48,12 @@ The visualization part of `run_encoder.py` is still under consideration.
 <td> <figure>
   <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 250px;"/> <figcaption align = "bottom"><b>Prediction trajectory</b></figcaption>
 </figure></td>
-</tr></table>
-
+</tr>
+<tr>
+  <td> Ground truth trajectory</td>
+  <td> Prediction trajectory</td>
+</tr>  
+</table>
 ## TODOs
 
 
