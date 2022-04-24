@@ -43,10 +43,10 @@ The visualization part of `run_encoder.py` is still under consideration.
 
 <table><tr>
 <td> <figure>
-<img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 250px;"/> <figcaption align = "bottom"><b>Ground truth trajectory</b></figcaption>
+<img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 250px;"/> 
 </figure></td>
 <td> <figure>
-  <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 250px;"/> <figcaption align = "bottom"><b>Prediction trajectory</b></figcaption>
+  <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 250px;"/>
 </figure></td>
 </tr>
 <tr>
