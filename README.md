@@ -38,8 +38,8 @@ Then use the notebook `traj_plot.ipynb` to plot a gif.
 The visualization part of `run_encoder.py` is still under consideration. 
 
 <table><tr>
-<td> <img src="demo_grand_truth.gif" alt="Drawing" style="width: 300px;"/> </td>
-<td> <img src="demo_model_out.gif" alt="Drawing" style="width: 300px;"/> </td>
+<td> <img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 300px;"/> </td>
+<td> <img src="figures/demo_model_out.gif" alt="Drawing" style="width: 300px;"/> </td>
 </tr></table>
 
 ## TODOs
