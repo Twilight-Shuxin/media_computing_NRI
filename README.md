@@ -40,7 +40,11 @@ We provide `run_decoder.py` and `run_encoder.py` for generating trajectory based
 Then use the notebook `traj_plot.ipynb` to plot a gif.
 
 The visualization part of `run_encoder.py` is still under consideration. 
-
+<style>
+td, th {
+   border: none!important;
+}
+</style>
 <table><tr>
 <td> <figure>
 <img src="figures/demo_grand_truth.gif" alt="Drawing" style="width: 250px;"/> <figcaption align = "center"><b>Ground truth trajectory</b></figcaption>
