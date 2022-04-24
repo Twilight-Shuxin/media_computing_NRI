@@ -1,7 +1,10 @@
 # 2022 - NRI
 
 Reimplementation of the **N**eural **R**elation **I**nference proposed in the following paper: Kipf, Thomas, et al. "Neural relational inference for interacting systems." *International Conference on Machine Learning*. PMLR, 2018.
-
+<figure>
+<img src="figures/paper_fig.PNG" alt="Drawing" style="width: 600px;"/>
+<figcaption align = "center"><b>Figure 5 in Neural Relational Inference for Interacting Systems</b></figcaption>
+</figure>
 ## Prerequisites
 
 Recommend using conda virtual environment. A `environment.yml` file has been set up. Simply run the following command to setup the required environment.
