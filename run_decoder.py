@@ -64,8 +64,8 @@ for batch_idx, (input_batch, relations) in enumerate(test_loader):
     ret_output[batch_idx,:,:,:,:] = output.detach().numpy()
     ret_target[batch_idx,:,:,:,:] = target
 
-with open(f'saved_results/decoder_result/{args.data_suffix+"output"}.npy', 'wb') as f:
+with open(f'../saved_results/decoder_result/{args.data_suffix+"output"}.npy', 'wb') as f:
     np.save(f, ret_output)
     
-with open(f'saved_results/decoder_result/{args.data_suffix+"target"}.npy', 'wb') as f:    
+with open(f'../saved_results/decoder_result/{args.data_suffix+"target"}.npy', 'wb') as f:    
     np.save(f, ret_target)
