@@ -56,6 +56,8 @@ The visualization part of `run_encoder.py` is still under consideration.
   <td> <center>Prediction trajectory</center></td>
 </tr>  
 </table>
+
+
 ## TODOs
 
 
