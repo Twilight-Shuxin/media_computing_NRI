@@ -39,7 +39,10 @@ The visualization part of `run_encoder.py` is still under development.
 
 ![gif4grand_truth](demo_grand_truth.gif "Grand truth trajectory")
 ![gif4model_output](demo_model_out.gif "Model prediction trajectory")
-
+<table><tr>
+<td> <img src="demo_grand_truth.gif" alt="Drawing" style="width: 250px;"/> </td>
+<td> <img src="demo_model_out.gif" alt="Drawing" style="width: 250px;"/> </td>
+</tr></table>
 
 ## TODOs
 
