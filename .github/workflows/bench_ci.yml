@@ -27,7 +27,7 @@ jobs:
                   echo $CONDA/bin >> $GITHUB_PATH
             - name: Install dependencies
               run: |
-                  conda env update --file environment.yml --prune
+                  conda env create --file=environments.yml
                   conda info
             - name: Install local packages
               run: |
@@ -35,8 +35,8 @@ jobs:
             - name: Train
               run : |
                   $CONDA/bin/activate para_esn
-                  conda run python scripts/train_enc.py -e 1
-                  conda run python scripts/trian_dec.py -e 1
+                  python scripts/train_enc.py -e 1
+                  python scripts/trian_dec.py -e 1
                   
           
 
