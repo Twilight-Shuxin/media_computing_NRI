@@ -27,7 +27,7 @@ jobs:
                   echo $CONDA/bin >> $GITHUB_PATH
             - name: Install dependencies
               run: |
-                  conda env create --name base --file environment.yml
+                  conda env create --name base --file environment.yml --force
                   conda info
             - name: Install local packages
               run: |
