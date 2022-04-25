@@ -31,6 +31,10 @@ jobs:
             - name: Install local packages
               run: |
                   pip install -e.
+            - name: Train
+              run : |
+                  python train_enc.py -e 1
+                  python trian_dec.py -e 1
                   
           
 
