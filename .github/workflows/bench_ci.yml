@@ -33,7 +33,7 @@ jobs:
                   pip install -e.
             - name: Train
               run : |
-                  $CONDA/bin/conda activate testenv
+                  $CONDA/bin/activate testenv
                   python scripts/train_enc.py -e 1
                   python scripts/trian_dec.py -e 1
                   
