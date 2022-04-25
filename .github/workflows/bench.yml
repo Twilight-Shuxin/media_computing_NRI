@@ -17,25 +17,22 @@ jobs:
             matrix:
                 os: [ubuntu-latest]
     
-
         steps:
             - uses: actions/checkout@v3
             - uses: actions/setup-python@v3
+            - name: Add conda to system path
+              run: |
+                  # $CONDA is an environment variable pointing to the root of the miniconda directory
+                  echo $CONDA/bin >> $GITHUB_PATH
             - name: Install dependencies
               run: |
-                 C:\Miniconda\condabin\conda.bat env update --file environment.yml --name base
-                 C:\Miniconda\condabin\conda.bat init powershell
+                  conda env create --file=environment.yml
+                  conda info
             - name: Install local packages
               run: |
                   pip install -e.
             - name: Train
               run : |
-                  C:\Miniconda\condabin\conda.bat activate base
-                  python scripts/train_enc.py -e 1
+                  $CONDA/bin/activate para_esn
+                  conda run python scripts/train_enc.py -e 1
                   python scripts/trian_dec.py -e 1
-                  
-          
-
-
-
-    
