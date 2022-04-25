@@ -27,13 +27,14 @@ jobs:
                   echo $CONDA/bin >> $GITHUB_PATH
             - name: Install dependencies
               run: |
-                  conda env create --name testenv --file environment.yml
+                  conda env create --name base --file environment.yml
+                  conda info
             - name: Install local packages
               run: |
                   pip install -e.
             - name: Train
               run : |
-                  $CONDA/bin/activate testenv
+                  $CONDA/bin/activate base
                   conda run python scripts/train_enc.py -e 1
                   conda run python scripts/trian_dec.py -e 1
                   
