@@ -31,8 +31,8 @@ jobs:
             - name: Install local packages
               run: |
                   pip install -e.
-#             - name: Train
-#               run : |
-#                   $CONDA/bin/activate para_esn
-#                   conda run python scripts/train_enc.py -e 1
-#                   python scripts/trian_dec.py -e 1
+           - name: Train
+             run : |
+                  $CONDA/bin/activate para_esn
+                  conda run python scripts/train_enc.py -e 1
+                  python scripts/trian_dec.py -e 1
