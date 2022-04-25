@@ -34,8 +34,8 @@ jobs:
             - name: Train
               run : |
                   $CONDA/bin/activate testenv
-                  python scripts/train_enc.py -e 1
-                  python scripts/trian_dec.py -e 1
+                  conda run python scripts/train_enc.py -e 1
+                  conda run python scripts/trian_dec.py -e 1
                   
           
 
