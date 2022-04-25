@@ -2,10 +2,10 @@ name: conda envs build and test
 # Controls when the workflow will run
 on:
   # Triggers the workflow on push or pull request events but only for the master branch
-  push:
-    branches: [ master ]
-  pull_request:
-    branches: [ master ]
+  #push:
+  #  branches: [ master ]
+  #pull_request:
+  #  branches: [ master ]
 
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
@@ -34,7 +34,8 @@ jobs:
                   pip install -e.
             - name: Train
               run : |
-                  $CONDA/bin/activate para_esn
+                  conda activate para_esn
+                  conda run
                   python scripts/train_enc.py -e 1
                   python scripts/trian_dec.py -e 1
                   
